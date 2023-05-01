@@ -8,7 +8,7 @@ public class HayMachine : MonoBehaviour
     public float horizontalBoundary = 22;
     public GameObject hayBalePrefab;
     public Transform haySpawnpoint;
-    public float shootInterval;
+    //public float shootInterval;
 
     public Transform modelParent;
 
@@ -78,7 +78,7 @@ public class HayMachine : MonoBehaviour
 
         if (shootTimer <= 0 && Input.GetKey(KeyCode.Space))
         {
-            shootTimer = shootInterval;
+            shootTimer = GameStateManager.Instance.shootInterval;
             ShootHay();
         }
     }

@@ -10,6 +10,8 @@ public class UIManager : MonoBehaviour
     public Text sheepSavedText;
     public Text sheepDroppedText;
     public GameObject gameOverWindow;
+    public GameObject winWindow;
+    public GameObject nextLevelWindow;
 
     // Start is called before the first frame update
     void Awake()
@@ -30,5 +32,21 @@ public class UIManager : MonoBehaviour
     public void ShowGameOverWindow()
     {
         gameOverWindow.SetActive(true);
+    }
+
+    public void ShowWinWindow()
+    {
+        winWindow.SetActive(true);
+    }
+
+    public void ShowNextLevelWindow()
+    {
+        nextLevelWindow.SetActive(true);
+        Invoke("HideWindow", 1.5f);
+    }
+    
+    public void HideWindow()
+    {
+        nextLevelWindow.SetActive(false);
     }
 }

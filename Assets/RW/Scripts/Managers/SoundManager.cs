@@ -44,4 +44,9 @@ public class SoundManager : MonoBehaviour
     {
         PlaySound(sheepDroppedClip);
     }
+
+    public void StopSheepFarmClip()
+    {
+        gameObject.GetComponent<AudioSource>().Stop();
+    }
 }
